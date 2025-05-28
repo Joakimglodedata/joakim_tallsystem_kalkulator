@@ -29,8 +29,7 @@ function magic() {
 
     
     //Jobb videre med denne funksjonen
-    const results = splitInput.reverse()
-    .map((value, index) => value * index);
+    const results = splitInput.reverse().map((value, index) => value * baseNumberInput ** (index));
     console.log(results);
     
     
