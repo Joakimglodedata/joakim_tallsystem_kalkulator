@@ -40,6 +40,22 @@ function magic() {
     
 }
 
+// // Reference table
+// const referenceTable = {
+//     apple: "fruit",
+//     carrot: "vegetable",
+//     salmon: "fish"
+//   };
+  
+//   // Input array
+//   const inputArray = ["apple", "carrot", "chocolate", "salmon", "bread"];
+  
+//   // Convert values based on the reference table
+//   const convertedArray = inputArray.map(item => referenceTable[item] || item);
+  
+//   console.log(convertedArray);
+  // Output: ["fruit", "vegetable", "chocolate", "fish", "bread"]
+
 
 
 
