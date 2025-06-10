@@ -6,6 +6,35 @@
 // test1.onclick = () => console.log(baseNumberOutput)
 // test2.onclick = () => console.log(baseNumberInput)
 
+const highNumbers = { 
+    A: 10,
+    B: 11,
+    C: 12, 
+    D: 13, 
+    E: 14, 
+    F: 15, 
+    G: 16, 
+    H: 17, 
+    I: 18, 
+    J: 19, 
+    K: 20, 
+    L: 21, 
+    M: 22, 
+    N: 23, 
+    O: 24, 
+    P: 25, 
+    Q: 26, 
+    R: 27, 
+    S: 28, 
+    T: 29, 
+    U: 30, 
+    V: 31, 
+    W: 32, 
+    X: 33, 
+    Y: 34, 
+    Z: 35
+}
+
 submitOutput.onclick = magic
 
 function magic() {
@@ -17,26 +46,25 @@ function magic() {
     console.log(baseNumberOutput)
     console.log(baseNumberInput)
 
-    function splitnumber(inputNumber) {
-        return inputNumber
+    function splitnumber(y) {
+        return y
         .toString()
         .split("")
+        .map(x => highNumbers[x] || x)
         .map(Number);
     }
     
     const splitInput = splitnumber(inputNumber)
     document.querySelector("#splitDisplay").textContent = `Split result: ${splitInput}`
 
-    
-    //Jobb videre med denne funksjonen
-    const results = splitInput.reverse().map((value, index) => value * baseNumberInput ** (index));
-    console.log(results);
-    
-    
+    // let indexValues
+    // while (indexValues <= inputSum);
 
-
-    const result = inputNumber * baseNumberInput
-    output.textContent = `Result: ${result}`
+    const inputResults = splitInput.reverse().map((value, index) => value * baseNumberInput ** (index));
+    console.log(inputResults);
+    
+    output.textContent = `Result: ${inputResults}`
+    
     
 }
 
