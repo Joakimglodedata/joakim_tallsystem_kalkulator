@@ -46,15 +46,8 @@ function magic() {
     console.log(baseNumberOutput)
     console.log(baseNumberInput)
 
-    function splitnumber(y) {
-        return y
-        .toString()
-        .split("")
-        .map(x => highNumbers[x] || x)
-        .map(Number);
-    }
     
-    const splitInput = splitnumber(inputNumber)
+    const splitInput = inputNumber.toString().split("").map(x => highNumbers[x] || x).map(Number);
     document.querySelector("#splitDisplay").textContent = `Split result: ${splitInput}`
 
     // let indexValues
@@ -64,6 +57,9 @@ function magic() {
     console.log(inputResults);
     
     output.textContent = `Result: ${inputResults}`
+
+    inputTotal = inputResults.reduce((total, num) => total + num)
+    
     
     
 }
